@@ -27,12 +27,12 @@ public class StringListProcessorImplTest extends ListProcessorImplTest<String> {
 
     @Test
     public void testStringSize() {
-        assertEquals(6, resultDataset.size());
+        assertEquals(6, dataset.size());
     }
 
     @Test
     public void testStringPosition() {
-        assertEquals("Z", resultDataset.get(1));
+        assertEquals("Z", dataset.get(1));
     }
 
 }

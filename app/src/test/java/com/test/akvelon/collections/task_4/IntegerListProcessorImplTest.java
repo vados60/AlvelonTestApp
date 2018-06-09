@@ -27,11 +27,11 @@ public class IntegerListProcessorImplTest extends ListProcessorImplTest<Integer>
 
     @Test
     public void testIntegerSize() {
-        assertEquals(6, resultDataset.size());
+        assertEquals(6, dataset.size());
     }
 
     @Test
     public void testInsertedPosition() {
-        assertEquals(9, (int) resultDataset.get(4));
+        assertEquals(9, (int) dataset.get(4));
     }
 }

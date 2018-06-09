@@ -6,15 +6,14 @@ import java.util.List;
 
 public abstract class ListProcessorImplTest<T extends Comparable> {
 
-    protected List<T> initialDataset;
+    protected List<T> dataset;
     protected ListProcessor<T> processor;
-    protected List<T> resultDataset;
 
     @Before
     public void setUp() {
-        initialDataset = provideInitialDataset();
+        dataset = provideInitialDataset();
         processor = new ListProcessorImpl<>();
-        resultDataset = processor.processInsert(initialDataset, provideValueToInsert());
+        processor.processInsert(dataset, provideValueToInsert());
     }
 
     protected abstract List<T> provideInitialDataset();

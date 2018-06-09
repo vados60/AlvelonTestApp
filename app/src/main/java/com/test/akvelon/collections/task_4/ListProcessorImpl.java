@@ -1,24 +1,33 @@
 package com.test.akvelon.collections.task_4;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class ListProcessorImpl<T extends Comparable> implements ListProcessor<T> {
 
-    private List<T> result = new LinkedList<>();
     private int counter = 0;
 
     @Override
-    public List<T> processInsert(List<T> list, T value) {
-        int pos = getInsertPosition(list, value, 0, list.size() - 1);
+    public void processInsert(List<T> list, T value) {
+        int pos = 0;
+        if (!list.isEmpty()) {
+            pos = getInsertPosition(list, value, 0, list.size() - 1);
+        }
         System.out.println(pos);
-
-        result.addAll(list);
-        result.add(pos, value);
-        System.out.println(result);
-        return result;
+        list.add(pos, value);
+        System.out.println(list);
     }
 
+    /**
+     * This method calculates position for new element in the list.
+     * It follows half-division method where it takes bounds of elements and compare median value
+     * with {@param value}. on each step bounds become tighther until they become neighbours.
+     *
+     * @param list
+     * @param value
+     * @param left
+     * @param right
+     * @return position where to insert new element
+     */
     private int getInsertPosition(List<T> list, T value, int left, int right) {
         counter++;
         int avg = (left + right) / 2;
