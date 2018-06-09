@@ -1,9 +1,8 @@
-package com.hhp.alvelontestapp;
+package com.test.akvelon;
 
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
 
 /**
  * Example local unit test, which will execute on the development machine (host).
@@ -13,7 +12,8 @@ import static org.junit.Assert.assertNotNull;
 public class ExampleUnitTest {
 
     @Test
-    public void testTask() {
-        assertNotNull(TestTask.execute());
+    public void testSum() {
+        assertEquals(4, 2 + 2);
     }
+
 }

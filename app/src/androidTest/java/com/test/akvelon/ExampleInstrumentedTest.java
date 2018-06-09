@@ -1,4 +1,4 @@
-package com.hhp.alvelontestapp;
+package com.test.akvelon;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
